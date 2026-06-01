@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.Design;
 
-namespace davaleba8
+namespace davaleba7
 {
     internal class Program
     {
