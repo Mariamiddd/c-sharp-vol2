@@ -151,9 +151,5 @@ namespace davaleba7
         #endregion
 
 
-
-
-
-
     }
 }
