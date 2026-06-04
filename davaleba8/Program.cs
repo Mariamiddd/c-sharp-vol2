@@ -32,8 +32,8 @@ namespace davaleba8
                // ვამოწმებთ ქვეყანა ემთხვევა თუ არა თანამშრომლის ქვეყანას 
                 if (emp.Country == originCountry)
                 {
-                    //ვბეჭდავთ იმ თანამშრომლებს როლებიც აეიან იმ ქვეყნიდან 
-                    //viyeneb employ.cs shi sheqmnil methodsac
+                    //ვბეჭდავთ იმ თანამშრომლებს როლებიც აეიან იმ ქვეყნიდან და ვიყენებთ  employcs ში შექმნილ მეთოდს ასაკის გამოსათვლელად 
+                 
                     Console.WriteLine($"Name: {emp.Name} {emp.Surname}, Age: {emp.CalculateAge()}, Country: {emp.Country}");
                 }
             }
