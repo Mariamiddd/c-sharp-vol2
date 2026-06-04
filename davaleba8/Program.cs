@@ -20,24 +20,23 @@ namespace davaleba8
             employs[6] = new Employ("Yuki", "Tanaka", new DateTime(2000, 12, 5), Country.Greece, Gender.Other, Contacts.mobile);
             employs[7] = new Employ("Ken", "Sato", new DateTime(1988, 8, 19), Country.Italy, Gender.Other, Contacts.mail);
 
-            PrintByCountry(employs, Country.France);
+            //employs qalaqis mixedvit
+            Console.WriteLine("\nEmployees from France:");
+            Employ.PrintByCountry(employs, Country.France);
+
+            Console.WriteLine("\nEmployees from Georgia:");
+            Employ.PrintByCountry(employs, Country.Georgia);
+
+            Console.WriteLine("\nEmployees from Greece:");
+            Employ.PrintByCountry(employs, Country.Greece);
+
+            Console.WriteLine("\nEmployees from Italy:");
+            Employ.PrintByCountry(employs, Country.Italy);
+
 
         }
 
-        // ვფილტრავთ ქვეყნის კონკრეტული ქვეყნის მიხედვტ და ვბეჭდავთ პიროვნებას
-        static void PrintByCountry(Employ[] array, Country originCountry)
-        {
-            foreach (Employ emp in array)
-            {
-               // ვამოწმებთ ქვეყანა ემთხვევა თუ არა თანამშრომლის ქვეყანას 
-                if (emp.Country == originCountry)
-                {
-                    //ვბეჭდავთ იმ თანამშრომლებს როლებიც აეიან იმ ქვეყნიდან და ვიყენებთ  employcs ში შექმნილ მეთოდს ასაკის გამოსათვლელად 
-                 
-                    Console.WriteLine($"Name: {emp.Name} {emp.Surname}, Age: {emp.CalculateAge()}, Country: {emp.Country}");
-                }
-            }
-        }
+  
         
                 
      }
