@@ -34,10 +34,6 @@ namespace davaleba8
             Employ.PrintByCountry(employs, Country.Italy);
 
 
-        }
-
-  
-        
-                
-     }
+        }              
     }
+}
