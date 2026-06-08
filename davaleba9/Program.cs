@@ -39,9 +39,20 @@
             myViolin.Desc();
             myViolin.History();
             Console.WriteLine("==========================================");
+
+
+
+            //worker davaleba
+
+            President president = new President("Donald", 80);
+            Security security = new Security("John", 30);
+            Manager manager = new Manager("Alice", 35);
+            Engineer engineer = new Engineer("Bob", 28);
+            president.Print();
+            security.Print();
+            manager.Print();
+            engineer.Print();
         }
-
-
 
     }
 }
