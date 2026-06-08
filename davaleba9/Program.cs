@@ -3,8 +3,9 @@
     internal class Program
     {
         static void Main(string[] args)
+        #region Musical Instruments
 
-            {
+        {
             Console.WriteLine("===================ukulele=======================");
             Ukulele myUkulele = new Ukulele();
             myUkulele.Sound();
@@ -40,7 +41,9 @@
             myViolin.History();
             Console.WriteLine("==========================================");
 
+#endregion
 
+        #region worker davaleba
 
             //worker davaleba
 
@@ -52,6 +55,7 @@
             security.Print();
             manager.Print();
             engineer.Print();
+            #endregion
         }
 
     }
