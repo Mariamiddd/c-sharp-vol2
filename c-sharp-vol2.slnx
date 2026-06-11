@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="c-sharp-vol2/c-sharp-vol2.csproj" />
   <Project Path="davaleba 7/davaleba 7.csproj" />
+  <Project Path="davaleba10/davaleba10.csproj" Id="acd59c35-3e04-4e53-8600-5443f7a9f01d" />
   <Project Path="davaleba8/davaleba8.csproj" Id="5db6a3df-2704-4c5a-b361-923b572a349c" />
   <Project Path="davaleba9/davaleba9.csproj" Id="3e7dc601-fdee-4de7-bfbb-aa1fd9f3c5b2" />
 </Solution>
