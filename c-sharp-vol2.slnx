@@ -6,5 +6,6 @@
   <Project Path="davaleba13/davaleba13.csproj" Id="fc7370b8-2f6f-4ae5-87e7-b5d772af142c" />
   <Project Path="davaleba8/davaleba8.csproj" Id="5db6a3df-2704-4c5a-b361-923b572a349c" />
   <Project Path="davaleba9/davaleba9.csproj" Id="3e7dc601-fdee-4de7-bfbb-aa1fd9f3c5b2" />
+  <Project Path="genericsaklaso/genericsaklaso.csproj" Id="75cca5d3-d03d-49ca-93b6-057122e71e01" />
   <Project Path="saklaso/saklaso.csproj" Id="9d602072-b813-4f53-85a8-9732c385d569" />
 </Solution>

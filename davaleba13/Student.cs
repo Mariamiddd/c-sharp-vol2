@@ -5,6 +5,7 @@ using System.Text;
 
 namespace davaleba13
 {
+    #region 1პუნქტი
     public class Student
     {
         //student class with properties
@@ -30,7 +31,7 @@ namespace davaleba13
 
 
         }
-
+    #endregion
 
     }
 }
