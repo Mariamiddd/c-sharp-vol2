@@ -5,33 +5,29 @@ using System.Text;
 
 namespace davaleba13
 {
-    #region 1პუნქტი
-    public class Student
+    public class Student : Person, IPrintable
     {
         //student class with properties
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public byte Age { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
+
         public double GPA { get; set; }
         public Faculty Faculty { get; set; }
 
-        //კონსტრუქტორი მოგვიანებით ობიქტების შესაქმნელად
-
         public Student(string name, string lastName, byte age, string email, string phone, double gpa, Faculty faculty)
+          : base(name, lastName, age, email, phone)
         {
-            Name = name;
-            LastName = lastName;
-            Age = age;
-            Email = email;
-            Phone = phone;
             GPA = gpa;
             Faculty = faculty;
-
-
         }
-    #endregion
+
+
+            // ინტერფეისის მეთოდის იმპლემენტაცია
+        public void Print()
+        {
+            Console.WriteLine($"{Name} {LastName} | Age: {Age} | Faculty: {Faculty} | GPA: {GPA}");
+        }
+        //operatorebis gadatvirtva
+        public static bool operator >(Student s1, Student s2) => s1.GPA > s2.GPA;
+        public static bool operator <(Student s1, Student s2) => s1.GPA < s2.GPA;
+    }
 
     }
-}

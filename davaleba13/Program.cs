@@ -9,8 +9,14 @@ namespace davaleba13
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
+            runMenu();
+            
 
-            #region
+
+
+                }
+        static void runMenu()
+        {
             //ვქმნით 10 სტუდენტდს და ვნახავთ მასივში
             Student[] students = new Student[10];
             students[0] = new Student("giorgi", "nadibaidze", 20, "giorginadibaidze@gmail.com", "55555555555", 2.3, Faculty.IT);
@@ -23,7 +29,6 @@ namespace davaleba13
             students[7] = new Student("aleksei", "ivanov", 24, "aleksei.ivanov@example.com", "5533333333", 3.2, Faculty.Medicine);
             students[8] = new Student("sopo", "tsereteli", 20, "sopo.tsereteli@example.com", "5522222222", 3.0, Faculty.IT);
             students[9] = new Student("dato", "smith", 21, "dato.smith@example.com", "5511111111", 4.0, Faculty.Business);
-            #endregion
 
 
             bool isWorking = true;
@@ -141,20 +146,20 @@ namespace davaleba13
                                 if (students[j] != null && students[j + 1] != null)
                                 {
                                     if (students[j].GPA < students[j + 1].GPA)
+                                    {
+                                        Student temp = students[j];
+                                        students[j] = students[j + 1];
+                                        students[j + 1] = temp;
+                                    }
+                                }
+                                else if (students[j] == null && students[j + 1] != null)
                                 {
                                     Student temp = students[j];
                                     students[j] = students[j + 1];
                                     students[j + 1] = temp;
                                 }
                             }
-                            else if (students[j] == null && students[j + 1] != null)
-                            {
-                                Student temp = students[j];
-                                students[j] = students[j + 1];
-                                students[j + 1] = temp;
-                            }
                         }
-                }
                         foreach (Student s in students)
                         {
                             if (s != null)
@@ -163,7 +168,7 @@ namespace davaleba13
                             }
                         }
                         break;
-                        //პუნქტი 6: სტუდენტის დამატება
+                    //პუნქტი 6: სტუდენტის დამატება
                     case "6":
                         try
                         {
@@ -175,14 +180,14 @@ namespace davaleba13
 
                             Console.Write("enter age(minimal age should be 17):");
                             int newAge = byte.Parse(Console.ReadLine());
-                            if( newAge < 17 )
+                            if (newAge < 17)
                             {
                                 Console.WriteLine("Student should be older than 16 yars old!");
                                 break;
                             }
                             Console.Write("enter Email");
                             string newEmail = Console.ReadLine();
-                            if(!newEmail.Contains("@"))
+                            if (!newEmail.Contains("@"))
                             {
                                 Console.WriteLine("try again! email should consist @!");
                                 break;
@@ -193,7 +198,7 @@ namespace davaleba13
 
                             Console.Write("enter gpa(0-100 diapazonshi):");
                             double newGpa = double.Parse(Console.ReadLine());
-                            if(newGpa < 0 || newGpa > 100)
+                            if (newGpa < 0 || newGpa > 100)
                             {
                                 Console.WriteLine("try again: gpa should be 0-100!");
                                 break;
@@ -232,7 +237,7 @@ namespace davaleba13
                                 break;
                             }
                         }
-                        if(!isStudentDeleted)
+                        if (!isStudentDeleted)
                         {
                             Console.WriteLine("student with this mail not found!");
                         }
@@ -241,21 +246,19 @@ namespace davaleba13
 
                     // პროგრამიდან გასვლა როდესაც bool ვანიჭებთ false მნიშვნელობას
                     case "8":
-                                Console.WriteLine("პროგრამა დასრულდა.");
-                                isWorking = false; // გამოვდივართ პროგრამიდან
-                                break;
+                        Console.WriteLine("პროგრამა დასრულდა.");
+                        isWorking = false; // გამოვდივართ პროგრამიდან
+                        break;
 
-                            default:
-                                //არასწორი ღილაკის დაჭერის შემთხვევაში მენიუს თავიდან ვბეჭდავთ
+                    default:
+                        //არასწორი ღილაკის დაჭერის შემთხვევაში მენიუს თავიდან ვბეჭდავთ
 
-                                Console.WriteLine("არასწორი არჩევანი. გთხოვთ შეიყვანოთ სწორი რიცხვი.");
-                                break;
-                            }
-                        }
-
-
-
+                        Console.WriteLine("არასწორი არჩევანი. გთხოვთ შეიყვანოთ სწორი რიცხვი.");
+                        break;
                 }
+            }
+        }
  
+
     }
 }
