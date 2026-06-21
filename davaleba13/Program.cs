@@ -9,7 +9,14 @@ namespace davaleba13
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            runMenu();
+
+            using (Logger appLogger = new Logger())
+            {
+                appLogger.Log("program started");
+                runMenu();
+
+                appLogger.Log("program finished");
+            }
         }
 
         static void runMenu()
