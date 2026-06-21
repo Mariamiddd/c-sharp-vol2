@@ -28,6 +28,7 @@ namespace davaleba13
             students[9] = new Student("dato", "smith", 21, "dato.smith@example.com", "5511111111", 4.0, Faculty.Business);
 
 
+
             bool isWorking = true;
             while (isWorking)
             {
