@@ -10,11 +10,8 @@ namespace davaleba13
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             runMenu();
-            
+        }
 
-
-
-                }
         static void runMenu()
         {
             //ვქმნით 10 სტუდენტდს და ვნახავთ მასივში
